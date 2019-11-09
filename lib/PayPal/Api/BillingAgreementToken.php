@@ -16,6 +16,7 @@ use PayPal\Validation\ArgumentValidator;
  * @package PayPal\Api
  * 
  * @property string token_id
+ * @property string token_status
  * @property string description
  * @property \PayPal\Api\Payer payer
  * @property \PayPal\Api\Address shipping_address
@@ -44,6 +45,29 @@ class BillingAgreementToken extends PayPalResourceModel
     public function getTokenId()
     {
         return $this->token_id;
+    }
+	
+    /**
+     * agreement-token status.
+     *
+     * @param string $tokenStatus
+     * 
+     * @return $this
+     */
+    public function setTokenStatus($tokenStatus)
+    {
+        $this->token_status = $tokenStatus;
+        return $this;
+    }
+
+    /**
+     * agreement-token status.
+     *
+     * @return string
+     */
+    public function getTokenStatus()
+    {
+        return $this->token_status;
     }
 	
     /**
@@ -158,7 +182,7 @@ class BillingAgreementToken extends PayPalResourceModel
     public function create($apiContext = null, $restCall = null)
     {
         $payLoad = $this->toJSON();
-var_dump($payLoad);
+		
         $json = self::executeCall(
             "/v1/billing-agreements/agreement-tokens",
             "POST",

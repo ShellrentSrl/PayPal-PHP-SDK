@@ -22,6 +22,8 @@ use PayPal\Validation\UrlValidator;
  * @property string initial_fail_amount_action
  * @property string accepted_payment_type
  * @property string char_set
+ * @property string skip_shipping_address
+ * @property string immutable_shipping_address
  */
 class MerchantPreferences extends PayPalModel
 {
@@ -256,6 +258,52 @@ class MerchantPreferences extends PayPalModel
     public function getCharSet()
     {
         return $this->char_set;
+    }
+
+    /**
+     * skip_shipping_address for this plan.
+     *
+     * @param bool $skip_shipping_address
+     * 
+     * @return $this
+     */
+    public function setSkipShippingAddress($skip_shipping_address)
+    {
+        $this->skip_shipping_address = $skip_shipping_address;
+        return $this;
+    }
+
+    /**
+     * skip_shipping_address for this plan.
+     *
+     * @return string
+     */
+    public function getSkipShippingAddress()
+    {
+        return $this->skip_shipping_address;
+    }
+
+    /**
+     * immutable_shipping_address for this plan.
+     *
+     * @param bool $immutable_shipping_address
+     * 
+     * @return $this
+     */
+    public function setImmutableShippingAddress($immutable_shipping_address)
+    {
+        $this->immutable_shipping_address = $immutable_shipping_address;
+        return $this;
+    }
+
+    /**
+     * immutable_shipping_address for this plan.
+     *
+     * @return string
+     */
+    public function getImmutableShippingAddress()
+    {
+        return $this->immutable_shipping_address;
     }
 
 }
