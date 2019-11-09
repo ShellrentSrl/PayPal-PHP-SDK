@@ -399,12 +399,12 @@ class BillingAgreement extends PayPalResourceModel
      *
      * @param ApiContext $apiContext is the APIContext for this call. It can be used to pass dynamic configuration and credentials.
      * @param PayPalRestCall $restCall is the Rest Call Service that is used to make rest calls
-     * @return Agreement
+     * @return BillingAgreement
      */
     public function create($apiContext = null, $restCall = null)
     {
         $payLoad = $this->toJSON();
-var_dump($payLoad);
+		
         $json = self::executeCall(
             "/v1/billing-agreements/agreements",
             "POST",
