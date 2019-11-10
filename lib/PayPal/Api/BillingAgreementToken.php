@@ -18,6 +18,7 @@ use PayPal\Validation\ArgumentValidator;
  * @property string token_id
  * @property string token_status
  * @property string description
+ * @property string merchant_custom_data
  * @property \PayPal\Api\Payer payer
  * @property \PayPal\Api\Address shipping_address
  * @property \PayPal\Api\Plan plan
@@ -91,6 +92,29 @@ class BillingAgreementToken extends PayPalResourceModel
     public function getDescription()
     {
         return $this->description;
+    }
+	
+    /**
+     * merchant_custom_data of the agreement-token.
+     *
+     * @param string $merchant_custom_data
+     * 
+     * @return $this
+     */
+    public function setMerchantCustomData($merchant_custom_data)
+    {
+        $this->merchant_custom_data = $merchant_custom_data;
+        return $this;
+    }
+
+    /**
+     * merchant_custom_data of the agreement-token.
+     *
+     * @return string
+     */
+    public function getMerchantCustomData()
+    {
+        return $this->merchant_custom_data;
     }
 
     /**
