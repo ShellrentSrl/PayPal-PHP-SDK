@@ -1,5 +1,5 @@
 {
-    "name": "shellrentsrl/rest-api-sdk-php",
+    "name": "shellrent/paypal-php-sdk",
     "description": "PayPal's PHP SDK for REST APIs",
     "keywords": ["paypal", "payments", "rest", "sdk"],
     "type": "library",
