@@ -10,3 +10,9 @@ For alternatives, please visit [the current SDK homepage on the PayPal Developer
 [![Coverage Status](https://coveralls.io/repos/paypal/PayPal-PHP-SDK/badge.svg?branch=master)](https://coveralls.io/r/paypal/PayPal-PHP-SDK?branch=master)
 
 See: [paypal/PayPal-PHP-SDK](https://github.com/paypal/PayPal-PHP-SDK)
+
+# Added by Shellrent
+
+See [Pull Request 1](https://github.com/shellrent/paypal-php-sdk/pull/1)
+
+Added methods for **Billing Agreements**.
